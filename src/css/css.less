@@ -136,8 +136,14 @@
 }
 
 // MY STYLE
+@specialFont: 'Righteous', cursive;
+// 
 body {
   background-image: url(../img/light-tex.png);  
+}
+
+h1 {
+  font-family: @specialFont;  
 }
 
 .mk802-header {
@@ -145,14 +151,12 @@ body {
   border-bottom: 1px solid #999;
   color: white;
   .mk804-logo {
-    font-family: 'Righteous', cursive;
     display: inline-block;
-    float:left;
+    float: left;
     margin-top: 48px;      
     h1 {
       letter-spacing: 1px;
       display: inline-block;
-      font-family: 'Righteous', cursive;
       font-size: 50px;
     }
   }
@@ -162,7 +166,7 @@ body {
     ul {
       .border-radius(5px, 5px, 5px, 5px);
       float: right;
-      margin-right: 80px;
+      margin-right: 90px;
       padding: 10px;
       display: inline-block;
       background-color: #93f89b;
@@ -188,9 +192,11 @@ body {
       padding-top: 40px;
       height: 400px;
       h1 {
+        font-family: @specialFont;
         font-size: 90px;
       }
       h2 {
+        font-family: @specialFont;
         padding-top: 30px;
         font-size: 50px;
       }
@@ -215,21 +221,44 @@ body {
     }
   }
 }
-.mk802-body {
+.mk802-section {
+  .container {
+    padding: 20px;
+    background-color: white;
+    .box-shadow(0 0 10px #666);
+  }
+}
+.mk802-information {
   .container {
     margin-top: -30px;
-    background-color: white;
-    width: 900px;
-    padding: 20px;
-    height: 1000px;
     .border-radius(10px, 0, 0, 10px);
-    .box-shadow(0 0 10px #666);
     .row {
+      h2 {
+        font-family: @specialFont;
+      }
       .mk802-video-review {
         width: 640px;
         margin-left: auto;
         margin-right: auto;
       }
     }
+  }
+}
+.mk802-specifications {
+  .container {
+    height: 1000px;
+  }
+}
+.mk802-buy {
+  .container {
+    height: 1000px;
+  }
+}
+
+.mk802-section {
+  h1 {
+    margin-left: 30px;
+    font-size: 40px;
+    letter-spacing: 1px;
   }
 }
