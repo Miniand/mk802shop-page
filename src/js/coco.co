@@ -1,0 +1,1 @@
+window.sayHello.coco = -> "Hello, #{it}"
