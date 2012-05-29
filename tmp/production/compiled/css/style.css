@@ -127,19 +127,37 @@ h1 {
 .mk802-information .container .row h2 {
   font-family: 'Righteous', cursive;
 }
-.mk802-information .container .row .mk802-video-review {
-  width: 640px;
-  margin-left: auto;
-  margin-right: auto;
+.mk802-versions .container .version-overview p {
+  line-height: 22px;
 }
-.mk802-specifications .container {
-  height: 1000px;
+.mk802-versions .container .row h2 {
+  text-align: center;
+  padding: 16px;
+  font-family: 'Righteous', cursive;
 }
-.mk802-buy .container {
-  height: 1000px;
+.mk802-versions .container .mk802-buy-button {
+  display: block;
+  margin: 0px auto;
+  padding: 10px 10px;
+  width: 120px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 .mk802-section h1 {
   margin-left: 30px;
   font-size: 40px;
   letter-spacing: 1px;
+}
+.mk802-in-stock {
+  color: green;
+  font-weight: bold;
+}
+.mk802-out-of-stock {
+  color: #999;
+  font-weight: bold;
+}
+.mk802-preorder-discount {
+  color: green;
+  font-weight: bold;
 }
