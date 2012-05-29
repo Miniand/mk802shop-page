@@ -135,6 +135,9 @@ h1 {
   padding: 16px;
   font-family: 'Righteous', cursive;
 }
+.mk802-versions .container .row form {
+  text-align: center;
+}
 .mk802-versions .container .mk802-buy-button {
   display: block;
   margin: 0px auto;

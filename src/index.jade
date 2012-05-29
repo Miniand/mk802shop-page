@@ -166,7 +166,13 @@ html(lang='en')
                     tr
                       th Postage
                       td $14USD (EMS with tracking)
-                  a.btn.btn-primary.mk802-buy-button(href="#buy", data-version='chinese-1gb') Buy now
+                  form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
+                    input(type='hidden', name='business', value='sales@mk802shop.com')
+                    input(type='hidden', name='cmd', value='_xclick')
+                    input(type='hidden', name='item_name', value='MK802 Android Mini PC - 1GB RAM - Chinese packaging (incl. postage)')
+                    input(type='hidden', name='amount', value='109')
+                    input(type='hidden', name='currency_code', value='USD')
+                    input(type='image', name='submit', border='0', src='https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif', alt='PayPal - The safer, easier way to pay online')
               li.span4
                 .thumbnail
                   img(src='img/prod-eng-1.png')
@@ -191,7 +197,13 @@ html(lang='en')
                     tr
                       th Postage
                       td $14USD (EMS with tracking)
-                  a.btn.btn-primary.mk802-buy-button(href="#buy", data-version='english-512mb') Buy now
+                  form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
+                    input(type='hidden', name='business', value='sales@mk802shop.com')
+                    input(type='hidden', name='cmd', value='_xclick')
+                    input(type='hidden', name='item_name', value='PREORDER - MK802 Android Mini PC - 512MB RAM - English packaging (incl. postage)')
+                    input(type='hidden', name='amount', value='94.75')
+                    input(type='hidden', name='currency_code', value='USD')
+                    input(type='image', name='submit', border='0', src='https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif', alt='PayPal - The safer, easier way to pay online')
               li.span4
                 .thumbnail
                   img(src='img/prod-eng-2.png')
@@ -216,7 +228,13 @@ html(lang='en')
                     tr
                       th Postage
                       td $14USD (EMS with tracking)
-                  a.btn.btn-primary.mk802-buy-button(href="#buy", data-version='english-1gb') Buy now
+                  form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
+                    input(type='hidden', name='business', value='sales@mk802shop.com')
+                    input(type='hidden', name='cmd', value='_xclick')
+                    input(type='hidden', name='item_name', value='PREORDER - MK802 Android Mini PC - 1GB RAM - English packaging (incl. postage)')
+                    input(type='hidden', name='amount', value='113.75')
+                    input(type='hidden', name='currency_code', value='USD')
+                    input(type='image', name='submit', border='0', src='https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif', alt='PayPal - The safer, easier way to pay online')
     .mk802-section.mk802-terms
       .container
         a(name="terms")
@@ -228,16 +246,13 @@ html(lang='en')
         .row
           .span4
             h2 Postage
-            p Postage is calculated at <strong>$14USD</strong> for the first item, then <strong>$5USD</strong> for each item after that.  Postage is the same for all countries.
+            p Postage is calculated at <strong>$14USD</strong>, and all items are delivered using EMS with worldwide tracking.  Postage is the same for all countries.
           .span4
             h2 Warranty
             p A one year warranty is offered on all items, including both the Chinese packaged and English packaged versions.  Warranty covers defects and problems that occur during reasonable usage.  Opening the MK802 voids warranty.
           .span4
             h2 Seller
             p MK802 Shop is run from the same province in China as the MK802 factory, offering a fast turnaround on new stock.  It is run by an Australian and Chinese team with a passion for FOSS and Linux.
-        .row
-          .span6
-
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
     script(src='lib/bootstrap/js/bootstrap.min.js')
     script(src='js/script.js')
