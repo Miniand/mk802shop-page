@@ -144,6 +144,9 @@ h1 {
   font-size: 18px;
   margin-bottom: 20px;
 }
+.mk802-terms .container h2 {
+  font-family: 'Righteous', cursive;
+}
 .mk802-section h1 {
   margin-left: 30px;
   font-size: 40px;

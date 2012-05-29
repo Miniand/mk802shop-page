@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+cd ../build/production
+s3cmd put --acl-public -r ./ s3://www.mk802shop.com
