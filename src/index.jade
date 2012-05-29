@@ -1,237 +1,46 @@
 doctype 5
 html(lang='en')
   head
-    title coo page
-    link(href='lib/google-code-prettify/prettify.css', rel='stylesheet')
+    title MK802 Shop - your one stop shop for the MK802 Android mini PC on a stick
+    link(href='http://fonts.googleapis.com/css?family=Righteous', rel='stylesheet', type='text/css')
     link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
     link(href='css/style.css', rel='stylesheet')
+    link(href='favicon.ico', rel='icon')
   body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          ul.nav
+    .mk802-header
+      .container
+        .mk804-logo
+          h1 MK802 Shop
+        .nav.mk802-nav
+          ul.nav.nav-pills
             li
-              a(href='http://coo.org')
-                i.icon-book.icon-white
-                |  Documentation
+              a(href="#information") Information
             li
-              a(href='https://github.com/beefsack/coo')
-                i.icon-folder-open.icon-white
-                |  GitHub
-    .container
-      .row
-        .span8.offset2
-          .hero-unit
-            h1 coo
-            p
-              | Code the way you want and let the build system work on it's own.
-              | Be a coder, not a plumber!
-            p
-              button.btn.btn-large.btn-primary(onclick='coffeeAction()') Click for a surprise!
-              button.btn.btn-large(onclick='kaffeineAction()') Click for another surprise!
-      .row
-        .span4
-          h2 Vast array of supported languages
-          p
-            | Just save the file with the file extension corresponding to the
-            | language you want to use and the rest is handled for you.  If you
-            | have custom naming requirements, that's fine!  You can customise
-            | compiling in your build config.
-        .span4
-          h2 Let the system take care of code building
-          p
-            | coo watches your source code for changes, and only builds
-            | the files that need to change.  The build config is set with sane
-            | defaults, but even if a change is required it tends to be set and
-            | forget.
-        .span4
-          h2 Run tests automatically to keep things reliable
-      .page-header
-        h1
-          | Supported languages
-          small  for JavaScript, CSS and HTML compilation
-      h2 JavaScript
-      .row.compiler
-        .span4
-          h3 CoffeeScript
-          p
-            a(href='http://coffeescript.org/') CoffeeScript
-            |  is a popular language inspired by Ruby, Python and Haskell.  Compiles automatically with the <code>.coffee</code> extension.
-          pre.prettyprint
-            | sayHello = (name) -&gt; "Hello, \#{name}"
-            | alert sayHello('CoffeeScript')
-          button.btn(onclick='alert(sayHello.coffee("CoffeeScript"))') Run code now
-        .span4
-          h3 Sibilant
-          p
-            a(href='http://sibilantjs.info/') Sibilant
-            |  is inspired by Lisp and follows many Lisp conventions.  Compiles automatically with the <code>.sibilant</code> extension.
-          pre.prettyprint
-            | (defun sayHello (name)
-            |   (concat "Hello, " name))
-            | (alert (sayHello "Sibilant"))
-          button.btn(onclick='alert(sayHello.sibilant("Sibilant"))') Run code now
-        .span4
-          h3 Roy
-          p
-            a(href='http://roy.brianmckenna.org/') Roy
-            |  tries to meld some features common in static functional languages.  Compiles automatically with the <code>.roy</code> extension.
-          pre.prettyprint
-            | let sayHello name: String =
-            |   "Hello, " ++ name
-            | alert (sayHello "Roy")
-          button.btn(onclick='alert(sayHello.roy("Roy"))') Run code now
-      .row.compiler
-        .span4
-          h3 IcedCoffeeScript
-          p
-            a(href='http://maxtaco.github.com/coffee-script/') IcedCoffeeScript
-            |  is a superset of CoffeeScript which simplifies asyncronous code.  Compiles automatically with the <code>.iced</code> extension.
-          pre.prettyprint
-            | sayHello = (name) -&gt; "Hello, \#{name}"
-            | alert sayHello('IcedCoffeeScript')
-          button.btn(onclick='alert(sayHello.iced("IcedCoffeeScript"))') Run code now
-        .span4
-          h3 Coco
-          p
-            a(href='https://github.com/satyr/coco/') Coco
-            |  is a CoffeeScript dialect that aims to be more radical and practical.  Compiles automatically with the <code>.co</code> extension.
-          pre.prettyprint
-            | sayHello = -&gt; "Hello, \#{it}"
-            | sayHello 'Coco'
-          button.btn(onclick='alert(sayHello.coco("Coco"))') Run code now
-        .span4
-          h3 Move
-          p
-            a(href='http://movelang.org/') Move
-            |  is aimed towards people not previously familiar with programming.  Compiles automatically with the <code>.mv</code> extension.
-          pre.prettyprint
-            | sayHello = ^(name){
-            |   "Hello, "+name
-            | }
-            | alert sayHello("Move")
-          button.btn(onclick='alert(sayHello.move("Move"))') Run code now
-      .row.compiler
-        .span4
-          h3
-            | Contracts.coffee
-            small  (not on Chrome)
-          p
-            a(href='http://disnetdev.com/contracts.coffee/') Contracts.coffee
-            |  is a dialect of CoffeeScript with built-in support for contracts.  Compiles automatically with the <code>.contracts</code> extension.
-          pre.prettyprint
-            | sayHello :: (Str) -> Str
-            | sayHello = (name) ->
-            |   "Hello, \#{name}"
-            | alert sayHello("contracts.coffee")
-          button.btn(onclick='alert(sayHello.contracts("contracts.coffee"))', disabled=true) Run code now
-        .span4
-          h3 Kaffeine
-          p
-            a(href='http://weepy.github.com/kaffeine/') Kaffeine
-            |  is a set of optional extensions to the JavaScript syntax.  Compiles automatically with the <code>.k</code> extension.
-          pre.prettyprint
-            | sayHello = function(n = 'Kaffeine') {
-            |   return "Hello, \#{n}"
-            | }
-            | alert(sayHello())
-          button.btn(onclick='alert(sayHello.kaffeine())') Run code now
-      h2 CSS
-      .row.compiler
-        .span4
-          h3 Less
-          p
-            a(href="http://lesscss.org/") Less
-            |  extends CSS with variables, mixins, operations and functions.  Compiles automatically with the <code>.less</code> extension.
-          pre.prettyprint
-            | body {
-            |   h1 {
-            |     color: @color;
-            |   }
-            | }
-        .span4
-          h3 Stylus
-          p
-            a(href="http://learnboost.github.com/stylus/") Stylus
-            |  provides an efficient, dynamic, and expressive way to generate CSS.  Compiles automatically with the <code>.styl</code> extension.
-          pre.prettyprint
-            | body
-            |   h1
-            |     color @color
-      h2 HTML
-      .row.compiler
-        .span4
-          h3 Haml
-          p
-            a(href="http://haml.info/") Haml
-            |  is based on one primary principle. Markup should be beautiful.  Compiles automatically with the <code>.haml</code> extension.
-          pre.prettyprint
-            | %html
-            |   %body
-            |     %p Paragraph text
-        .span4
-          h3 Jade
-          p
-            a(href="http://jade-lang.com/") Jade
-            |  is a high performance template engine heavily influenced by Haml.  Compiles automatically with the <code>.jade</code> extension.
-          pre.prettyprint
-            | html
-            |   body
-            |     p Paragraph text
-        .span4
-          h3 Markdown
-          p
-            a(href="http://daringfireball.net/projects/markdown/") Markdown
-            |  is a text-to-HTML conversion tool for web writers.  Compiles automatically with the <code>.md</code> extension.
-          pre.prettyprint
-            | This is a title
-            | ===============
-            | 
-            | This is some text.
-      .page-header
-        h1
-          | Write tests
-          small  in any supported language
-      .row
-        .span8.offset2
-          p Just like the rest of the project, you can write tests in your choice of language too.  Below are a few examples of tests in various languages.
-      .row
-        .span4
-          h3 JavaScript
-          p
-            | JavaScript tests end in
-            code  .spec.js
-          pre.prettyprint
-            | describe('A thing', function() {
-            |   it('should be true', function() {
-            |     expect(false).toBe(true);
-            |   });
-            | });
-        .span4
-          h3 CoffeeScript
-          p
-            a(href='http://coffeescript.org/') CoffeeScript
-            |  tests end in
-            code  .spec.coffee
-          pre.prettyprint
-            | describe 'A thing', ->
-            |   it 'should be true', ->
-            |     expect(false).toBe true
-        .span4
-          h3 Sibilant
-          p
-            a(href='http://sibilantjs.info/') Sibilant
-            |  tests end in
-            code  .spec.sibilant
-          pre.prettyprint
-            | (describe "A thing" (lambda ()
-            |   (it "should be true" (lambda ()
-            |     (chain 
-            |       (expect false)
-            |       (toBe true))))))
+              a(href="#specifications") Specifications
+            li
+              a(href="#buy") Buy now
+            li
+              a(href="#contact") Contact
+        .row
+          .span6.product-image
+            img(src='img/header-prod.png')
+          .span6.wow-text
+            h1 Android
+            h2 MK802 Stick PC
+            h3 Running Android 4.0, the MK802 Stick PC is designed for versatility and convenience.  The tiny 200 gram PC can plug directly into any HDMI output for an on the go media player, internet browser, game machine or general use.
+            h3 The MK802 is available in 512MB and 1GB memory configurations.
+            .actions
+              a.btn(href="#specifications") Specifications
+              a.btn.btn-primary(href="#buy") Buy now from $89
+    .mk802-body
+      .container
+        .row
+          .span3
+            p content
+        .row
+          .span12
+            .mk802-video-review
+              iframe(width="640", height="480", src="http://www.youtube.com/embed/ZDyBs6Wuu1o", frameborder="0", allowfullscreen=true)
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
-    script(src='lib/google-code-prettify/prettify.js')
     script(src='lib/bootstrap/js/bootstrap.min.js')
-    script(src='lib/move-0.4.5.js')
-    script(src='lib/coo.js')
     script(src='js/script.js')

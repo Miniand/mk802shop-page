@@ -1,3 +1,0 @@
-window.sayHello.move = ^(name){
-  return "Hello, "+name
-}

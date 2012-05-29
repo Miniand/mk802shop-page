@@ -1,2 +1,0 @@
-(defun window.sayHello.sibilant (name)
-  (concat "Hello, " name))

@@ -1,3 +1,0 @@
-let sayHello name: String =
-  "Hello, " ++ name
-bindSayHello "roy" sayHello
