@@ -1,11 +1,12 @@
 doctype 5
 html(lang='en')
   head
-    title MK802 Shop - your one stop shop for the MK802 Android mini PC on a stick
+    title MK802 Shop - your one stop shop for the Allwinner A10 MK802 Android Mini PC
     link(href='http://fonts.googleapis.com/css?family=Righteous', rel='stylesheet', type='text/css')
     link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
     link(href='css/style.css', rel='stylesheet')
     link(href='favicon.ico', rel='icon')
+    script(type='text/javascript') var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-32235309-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
   body
     .mk802-header
       .container
@@ -24,8 +25,8 @@ html(lang='en')
             img(src='img/header-prod.png')
           .span6.wow-text
             h1 Android
-            h2 MK802 Stick PC
-            h3 Running Android 4.0, the MK802 Stick PC is designed for versatility and convenience.  The tiny 200 gram PC can plug directly into any HDMI output for an on the go media player, internet browser, game machine or general use.
+            h2 MK802 Mini PC
+            h3 Running Android 4.0, the MK802 Allwinner A10 Mini PC is designed for versatility and convenience.  The tiny 200 gram PC can plug directly into any HDMI output for an on the go media player, internet browser, game machine or for general use.
             h3 The MK802 is available in 512MB and 1GB memory configurations.
             .actions
               a.btn(href="#specifications") Specifications
@@ -56,6 +57,14 @@ html(lang='en')
                   img(src='img/linux.png')
                   h2 Custoimizability
                   p Convert the MK802 into a fully fledged desktop PC by using the popular operating system Linux.  Using Linux, you get access to a wide range of desktop software.
+        .row
+          .span6.offset3
+            ul.thumbnails
+              li.span6
+                .thumbnail
+                  div
+                    iframe(width="450", height="338", src="http://www.youtube.com/embed/yBizEOtdDRA", frameborder="0", allowfullscreen=true)
+                  h2 Chinese 1GB MK802 demonstration
     .mk802-section.mk802-specifications
       .container
         a(name="specifications")
@@ -72,7 +81,7 @@ html(lang='en')
                 td AK-212MiniPC
               tr
                 th CPU
-                td Allwinner A10 1GHz Cortex-A8
+                td Allwinner A10 1.5GHz Cortex-A8
               tr
                 th GPU
                 td 2D / 3D / OpenGL ES2.0 (AMD Z430) / OpenVG1.1 (AMD Z160) @ 27M Tri/s
@@ -156,19 +165,20 @@ html(lang='en')
                       td 1 year
                     tr
                       th Packaging
-                      td Chinese (software is multilingual)
+                      td Chinese (software is English)
                     tr
                       th Software
-                      td Multilingual
+                      td English on boot, multilingual
                     tr
                       th Availability
-                      td.mk802-in-stock < 100 in stock
+                      td.mk802-out-of-stock Stock due mid June, 
+                        span.mk802-preorder-discount preorder discount of 5%
                     tr
                       th Postage
                       td $14USD (EMS with tracking)
                   form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
                     input(type='hidden', name='cmd', value='_s-xclick')
-                    input(type='hidden', name='encrypted', value='-----BEGIN PKCS7-----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-----END PKCS7-----')
+                    input(type='hidden', name='encrypted', value='-----BEGIN PKCS7-----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-----END PKCS7-----')
                     input(type='image', name='submit', border='0', src='https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif', alt='PayPal - The safer, easier way to pay online')
               li.span4
                 .thumbnail
@@ -186,10 +196,10 @@ html(lang='en')
                       td English
                     tr
                       th Software
-                      td Multilingual
+                      td English on boot, multilingual
                     tr
                       th Availability
-                      td.mk802-out-of-stock stock due mid June, 
+                      td.mk802-out-of-stock Stock due mid June, 
                         span.mk802-preorder-discount preorder discount of 5%
                     tr
                       th Postage
@@ -215,10 +225,10 @@ html(lang='en')
                       td English
                     tr
                       th Software
-                      td Multilingual
+                      td English on boot, multilingual
                     tr
                       th Availability
-                      td.mk802-out-of-stock stock due mid June, 
+                      td.mk802-out-of-stock Stock due mid June, 
                         span.mk802-preorder-discount preorder discount of 5%
                     tr
                       th Postage
