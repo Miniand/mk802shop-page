@@ -20,6 +20,9 @@ html(lang='en')
               a(href="#buy") Buy now
             li
               script document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'&'+'#'+'9'+'7'+';'+'i'+'&'+'#'+'1'+'0'+'8'+';'+'t'+'o'+'&'+'#'+'5'+'8'+';'+'&'+'#'+'3'+'7'+';'+'7'+'3'+'a'+'l'+'&'+'#'+'1'+'0'+'1'+';'+'s'+'&'+'#'+'6'+'4'+';'+'m'+'k'+'8'+'&'+'#'+'4'+'8'+';'+'2'+'%'+'&'+'#'+'5'+'5'+';'+'3'+'h'+'&'+'#'+'1'+'1'+'1'+';'+'&'+'#'+'3'+'7'+';'+'7'+'0'+'&'+'#'+'4'+'6'+';'+'c'+'o'+'m'+"'"+'>Contact<'+'/'+'a'+'>');
+          //- ul.nav.nav-pills
+          //-   li
+          //-     a(href='http://forum.mk802shop.com') Forum
         .row
           .span6.product-image
             img(src='img/header-prod.png')
@@ -155,10 +158,7 @@ html(lang='en')
               li.span4
                 .thumbnail
                   img(src='img/prod-chi-1.png')
-                  h2 1GB RAM - 
-                    span.mk802-before-discount $95
-                    |  preorder - 
-                    span.mk802-after-discount $90.25
+                  h2 1GB RAM - $95
                   table.table
                     tr
                       th RAM
@@ -174,14 +174,13 @@ html(lang='en')
                       td English on boot, multilingual
                     tr
                       th Availability
-                      td.mk802-out-of-stock Stock due mid June, 
-                        span.mk802-preorder-discount preorder discount of 5%
+                      td.mk802-in-stock Small quantity in stock
                     tr
                       th Postage
                       td $14USD (EMS with tracking)
                   form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
                     input(type='hidden', name='cmd', value='_s-xclick')
-                    input(type='hidden', name='encrypted', value='-----BEGIN PKCS7-----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-----END PKCS7-----')
+                    input(type='hidden', name='encrypted', value='-----BEGIN PKCS7-----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-----END PKCS7-----')
                     input(type='image', name='submit', border='0', src='https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif', alt='PayPal - The safer, easier way to pay online')
               li.span4
                 .thumbnail
